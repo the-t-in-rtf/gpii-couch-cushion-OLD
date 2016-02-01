@@ -21,7 +21,7 @@ Our core use cases for using relationships are manifold, but here are a few key 
 
 In the Unified Listing, we need to represent the relationship of user-contributed content to curated "unified" records.  In the Preference Terms Dictionary, we need to represent the relationship between "common" terms and variations on those terms ("aliases").  These are one-to-many relationships.
 
-![Diagram of one-to-many relationship, with all nodes highlighted.](./images/one-to-many-all-selected.svg)
+![Diagram of one-to-many relationship, with all nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/one-to-many-all-selected.png)
 
 In both use cases, a "child" record is only ever associated with one "parent".  We also want to represent "compound terms" in the Preference Terms Dictionary.  These are terms which are composed of simpler related records.  For example, we may collect metadata about the concept of "uppercase pitch", and we want to indicate that it is related to the concept of "uppercase" and also the concept of "pitch".  The concept of "pitch" may also be referenced in a "lowercase pitch" entry.
 
@@ -33,7 +33,7 @@ We are considering one-to-one relationships to be a subset of one-to-many relati
 
 We also have a number of use cases for records that all relate to one another equally.  For example, a group of related records.
 
-![Diagram of a group relationship, with all nodes highlighted.](./images/group-all-selected.svg)
+![Diagram of a group relationship, with all nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/group-all-selected.png)
 
 This type of relationship document does not describe how one record relates to others.  Instead, the relationship document describes how other documents relate to the relationship document itself.  The relationship document itself may contain simple metadata, such as a group name.
 
@@ -56,20 +56,18 @@ In order to present a seamless set of records, we need to retrieve the full docu
 
 For individual records, the lookup is fairly simple.  We may be starting from a central point ("common term", for example) and looking for its "children" ("aliases", in the PTD).
 
-![Test](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/group-all-selected.png)
+![Diagram of one-to-many relationship, with the origin nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/one-to-many-orig-selected.png)
 
-![Diagram of one-to-many relationship, with the origin nodes highlighted.](./images/one-to-many-orig-selected.svg)
-
-![Diagram of one-to-many relationship, with all nodes highlighted.](./images/one-to-many-all-selected.svg)
+![Diagram of one-to-many relationship, with all nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/one-to-many-all-selected.png)
 
 
 We might also be viewing a "child" record and want to see both our "parents" and siblings.
 
-![Diagram of one-to-many relationship, with the origin nodes highlighted.](./images/one-to-many-node-selected.svg)
+![Diagram of one-to-many relationship, with the origin nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/one-to-many-node-selected.png)
 
-![Diagram of one-to-many relationship, with all nodes highlighted.](./images/one-to-many-link-selected.svg)
+![Diagram of one-to-many relationship, with all nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/one-to-many-link-selected.png)
 
-![Diagram of one-to-many relationship, with all nodes highlighted.](./images/one-to-many-all-selected.svg)
+![Diagram of one-to-many relationship, with all nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/one-to-many-all-selected.png)
 
 
 In these cases we can:
