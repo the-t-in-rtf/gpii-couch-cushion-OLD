@@ -60,6 +60,11 @@ For individual records, the lookup is fairly simple.  We may be starting from a 
 
 ![Diagram of one-to-many relationship, with all nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/one-to-many-all-selected.png)
 
+In this case we can:
+
+1. Retrieve the set of related records using a {{startKey}} and {{endKey}} range and a view indexed using multi-value keys.
+2. Weave the content together using either a CouchDB list function or javascript code.
+
 
 We might also be viewing a "child" record and want to see both our "parents" and siblings.
 
@@ -70,10 +75,10 @@ We might also be viewing a "child" record and want to see both our "parents" and
 ![Diagram of one-to-many relationship, with all nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/one-to-many-all-selected.png)
 
 
-In these cases we can:
+If the child is not aware of its parent's ID, an additional lookup will be required to figure out the starting point, unless we:
 
-1. Retrieve the set of related records using a {{startKey}} and {{endKey}} range and a view indexed using multi-value keys.
-2. Weave the content together using either a CouchDB list function or javascript code.
+1. Query a "related to" view which contains the IDs of every record related to *any member's* ID.
+2. Knit together the documents retrieved.
 
 ## Looking up sets of records
 
