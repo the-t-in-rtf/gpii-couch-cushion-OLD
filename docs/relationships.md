@@ -31,7 +31,7 @@ We are considering one-to-one relationships to be a subset of one-to-many relati
 
 ## "group" relationships
 
-We also have a number of use cases for records that all relate to one another equally.  For example, a group of related records.
+We also have a number of use cases for records that all relate to one another equally.  For example, a group of related records, or a group of users in a named group.
 
 ![Diagram of a group relationship, with all nodes highlighted.](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/group-all-selected.png)
 
@@ -50,7 +50,7 @@ Although it is possible to store relationship information as part of our normal 
 
 # Looking up records
 
-In order to present a seamless set of records, we need to retrieve the full document content for all related parties.
+In order to present a seamless set of records, we need to retrieve the full document content for all related records.
 
 ## Looking up individual records
 
@@ -78,10 +78,14 @@ We might also be viewing a "child" record and want to see both our "parents" and
 If the child is not aware of its parent's ID, an additional lookup will be required to figure out the starting point, unless we:
 
 1. Query a "related to" view which contains the IDs of every record related to *any member's* ID.
-2. Knit together the documents retrieved.
+2. Weave the content together using either a CouchDB list function or javascript code.
 
 ## Looking up sets of records
 
 Both the UL and PTD offer a search, which returns a raw list of all record types.  We are given a list of records which may be "parents" or "children", and we need to knit them together into a sensible list of parents and their children.  This immediately increases the complexity because we cannot limit a CouchDB view request by multiple ranges.  We could use a CouchDB list and pass the list of "parent" IDs as keys, but in our testing lists are not performant enough.
 
-Instead, we propose having all searches return a list of matching IDs, and then looking up the record content using a large list of keys.  This brings us to the 8,000 character limit for CouchDB API requests.  We can only send 8,000 bytes of character data per request, including any other query parameters.  For searches with many matches, our options are either to only retrieve a subset of records, or to issue multiple queries.
+Instead, we propose starting with the list of matching IDs returned by the search, and then looking up the record content using a large list of keys.
+
+This brings us to the 8,000 character limit for CouchDB API requests.  We can only send 8,000 bytes of character data per request, including any other query parameters.  For searches with many matches, our options are either to only retrieve a subset of records, or to issue multiple queries.
+
+The Preference Terms Dictionary also supports browsing of "all records" (or at least the first page).  We would need to use a similar approach there.
