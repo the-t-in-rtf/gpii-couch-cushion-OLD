@@ -1,24 +1,23 @@
 function (head, req) {
     var groupedJSON = {};
     while (row = getRow()) {
-        var parentId = row.key[0];
-        if (row.key[1] === "parent") {
-            if (groupedJSON[parentId] && groupedJSON[parentId].members) {
-                row.doc.members = groupedJSON[parentId].members;
+        if (row._id === row.key) {
+            if (groupedJSON[row.key] && groupedJSON[row.key].members) {
+                row.doc.members = groupedJSON[row.key].members;
             }
 
-            groupedJSON[parentId] = row.doc;
+            groupedJSON[row.key] = row.doc;
         }
         else {
-            if (!groupedJSON[parentId]) {
-                groupedJSON[parentId] = {};
+            if (!groupedJSON[row.key]) {
+                groupedJSON[row.key] = {};
             }
 
-            if (!groupedJSON[parentId].members) {
-                groupedJSON[parentId].members = [];
+            if (!groupedJSON[row.key].members) {
+                groupedJSON[row.key].members = [];
             }
 
-            groupedJSON[parentId].members.push(row.doc);
+            groupedJSON[row.key].members.push(row.doc);
         }
     }
 

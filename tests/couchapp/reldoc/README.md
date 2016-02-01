@@ -16,6 +16,7 @@ To group the view output using the custom list, use the following URL:
 
 http://localhost:5984/relationships/_design/reldoc/_list/grouped-list/include_docs?include_docs=true
 
-To retrieve a single group by its ID, use a URL like:
+To retrieve one or more groups by their ID, use a URL like:
 
-http://localhost:5984/relationships/_design/reldoc/_list/grouped-list/include_docs?include_docs=true&endkey=[%22parent-1%22,%22parent%22]&startkey=[%22parent-1%22,%22child%22]
+http://localhost:5984/relationships/_design/reldoc/_list/grouped-list/include_docs?include_docs=true&keys=[%22parent-1%22,%22group-e%22]
+
