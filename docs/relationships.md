@@ -56,6 +56,8 @@ In order to present a seamless set of records, we need to retrieve the full docu
 
 For individual records, the lookup is fairly simple.  We may be starting from a central point ("common term", for example) and looking for its "children" ("aliases", in the PTD).
 
+![Test](https://raw.githubusercontent.com/the-t-in-rtf/gpii-couch-cushion/master/docs/images/group-all-selected.svg)
+
 ![Diagram of one-to-many relationship, with the origin nodes highlighted.](./images/one-to-many-orig-selected.svg)
 
 ![Diagram of one-to-many relationship, with all nodes highlighted.](./images/one-to-many-all-selected.svg)
