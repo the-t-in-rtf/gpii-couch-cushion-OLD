@@ -1,0 +1,79 @@
+{
+  "docs":[
+    {
+      "type": "relationship",
+      "parentId": "parent-1",
+      "members": [ "child-1a", "child-1b", "child-1c", "child-1d", "child-1e" ]
+    },
+    {
+      "type": "relationship",
+      "parentId": "parent-2",
+      "members": [ "child-2a", "child-2b", "child-2c", "child-2d", "child-2e" ]
+    },
+    {
+      "type": "relationship",
+      "parentId": "parent-3",
+      "members": [ "child-3a", "child-3b", "child-3c", "child-3d", "child-3e" ]
+    },
+    {
+      "type": "relationship",
+      "parentId": "parent-4",
+      "members": [ "child-4a", "child-4b", "child-4c", "child-4d", "child-4e" ]
+    },
+    {
+      "type": "relationship",
+      "parentId": "parent-5",
+      "members": [ "child-5a", "child-5b", "child-5c", "child-5d", "child-5e" ]
+    },
+    {
+      "type": "relationship",
+      "parentId": "parent-6",
+      "members": [ "child-6a", "child-6b", "child-6c", "child-6d", "child-6e" ]
+    },
+    {
+      "type": "relationship",
+      "parentId": "parent-7",
+      "members": [ "child-7a", "child-7b", "child-7c", "child-7d", "child-7e" ]
+    },
+    {
+      "type": "relationship",
+      "parentId": "parent-8",
+      "members": [ "child-8a", "child-8b", "child-8c", "child-8d", "child-8e" ]
+    },
+    {
+      "type": "relationship",
+      "parentId": "parent-9",
+      "members": [ "child-9a", "child-9b", "child-9c", "child-9d", "child-9e" ]
+    },
+    {
+      "type": "relationship",
+      "key": "group-a",
+      "members": [ "child-1a", "child-2a", "child-3a", "child-4a", "child-5a", "child-6a", "child-7a", "child-8a", "child-9a" ]
+    },
+    {
+      "type": "relationship",
+      "key": "group-b",
+      "members": [ "child-1b", "child-2b", "child-3b", "child-4b", "child-5b", "child-6b", "child-7b", "child-8b", "child-9b" ]
+    },
+    {
+      "type": "relationship",
+      "key": "group-c",
+      "members": [ "child-1c", "child-2c", "child-3c", "child-4c", "child-5c", "child-6c", "child-7c", "child-8c", "child-9c" ]
+    },
+    {
+      "type": "relationship",
+      "key": "group-d",
+      "members": [ "child-1d", "child-2d", "child-3d", "child-4d", "child-5d", "child-6d", "child-7d", "child-8d", "child-9d" ]
+    },
+    {
+      "type": "relationship",
+      "key": "group-e",
+      "members": [ "child-1e", "child-2e", "child-3e", "child-4e", "child-5e", "child-6e", "child-7e", "child-8e", "child-9e" ]
+    },
+    {
+      "type": "relationship",
+      "key": "group-f",
+      "members": [ "child-1f", "child-2f", "child-3f", "child-4f", "child-5f", "child-6f", "child-7f", "child-8f", "child-9f" ]
+    }
+  ]
+}
