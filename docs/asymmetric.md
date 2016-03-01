@@ -1,4 +1,4 @@
-# The "assymetric" CouchDB dataSource
+# The "asymmetric" CouchDB dataSource
 
 The [`kettle.dataSource.CouchDB`](https://github.com/fluid-project/kettle/blob/master/lib/dataSource.js#L399) grade
 included with [Kettle](https://github.com/fluid-project/kettle/) is designed to interact directly with the [CouchDB
@@ -9,7 +9,7 @@ This `dataSource` is "asymmetric" because it reads from one type of `dataSource`
 [`kettle.dataSource.URL`](https://github.com/amb26/kettle/blob/KETTLE-32/lib/dataSource.js#L300)), and writes to another
 (a plain `kettle.dataSource.CouchDB` grade).
 
-The "assymetric" CouchDB dataSource provided by this package is designed for cases in which you wish to read from
+The "asymmetric" CouchDB dataSource provided by this package is designed for cases in which you wish to read from
 something other than CouchDB's document API, for example:
 
 1. [A `list` or `show` function](https://wiki.apache.org/couchdb/Formatting_with_Show_and_List) provided by a CouchDB design document.
